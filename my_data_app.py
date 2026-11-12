@@ -1,3 +1,5 @@
+from pathlib import Path
+BASE = Path(_file_).parent
 import streamlit as st
 import pandas as pd
 
@@ -33,13 +35,11 @@ st.markdown('''<style> .stButton>button {
 
           
 # Charger les données 
-load_(pd.read_csv('data/motos_scooters1.csv'), 'Motocycles data 1', '1')
-load_(pd.read_csv('data/motos_scooters2.csv'), 'Motocycles data 2', '2')
-load_(pd.read_csv('data/motos_scooters3.csv'), 'Motocycles data 3', '3')
-load_(pd.read_csv('data/motos_scooters4.csv'), 'Motocycles data 4', '4')
-load_(pd.read_csv('data/motos_scooters5.csv'), 'Motocycles data 5', '5')
-
-
+load_(pd.read_csv(BASE / 'data' / 'motos_scooters1.csv'), 'Motocycles data 1', '1')
+load_(pd.read_csv(BASE / 'data' / 'motos_scooters2.csv'), 'Motocycles data 2', '2')
+load_(pd.read_csv(BASE / 'data' / 'motos_scooters3.csv'), 'Motocycles data 3', '3')
+load_(pd.read_csv(BASE / 'data' / 'motos_scooters4.csv'), 'Motocycles data 4', '4')
+load_(pd.read_csv(BASE / 'data' / 'motos_scooters5.csv'), 'Motocycles data 5', '5')
 
 
  
